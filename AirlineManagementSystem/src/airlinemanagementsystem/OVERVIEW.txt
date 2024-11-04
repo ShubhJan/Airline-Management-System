@@ -1,0 +1,53 @@
+Overview of the Airline Management System
+The airline management system is a Java-based desktop application designed to facilitate various operations related to airline bookings and customer management. The application utilizes a graphical user interface (GUI) built with Swing and connects to a MySQL database to store and retrieve data. The system provides functionalities for user authentication, flight management, booking, cancellation, and customer data handling.
+
+Key Components and Functionalities
+Login Module:
+
+Class: Login
+Functionality: Users can log in using their username and password. Upon successful authentication, users are directed to the main application interface (Home class). Invalid credentials prompt an error message.
+Main Interface:
+
+Class: Home
+Functionality: The main dashboard of the application, featuring a welcome message and a menu bar that allows users to navigate to various functionalities such as viewing flight details, adding customer information, booking flights, checking journey details, and canceling tickets.
+Flight Information:
+
+Class: FlightInfo
+Functionality: Displays a table of all available flights retrieved from the database. Users can view flight details in a structured format.
+Booking Module:
+
+Class: BookFlight
+Functionality: Users can book flights by entering their Aadhar number to fetch personal details. They can select a source and destination, view available flights, and confirm their booking. Each booking generates a unique Passenger Name Record (PNR) and stores the reservation details in the database.
+Cancellation Module:
+
+Class: Cancel
+Functionality: Allows users to cancel their flight bookings using their PNR number. It retrieves reservation details and, upon confirmation, records the cancellation in the database while deleting the corresponding reservation entry.
+Journey Details:
+
+Class: JourneyDetails
+Functionality: Users can enter their PNR number to view specific journey details. It fetches and displays relevant reservation information from the database.
+Boarding Pass Retrieval:
+
+Class: BoardingPass
+Functionality: Users can obtain their boarding pass information by entering their PNR number. The system displays passenger details, flight information, and travel dates.
+Customer Management:
+
+Class: AddCustomer
+Functionality: Provides a form for adding new customer details, including name, nationality, Aadhar number, address, gender, and phone number. This information is stored in the passenger database.
+Database Connection:
+
+Class: Conn
+Functionality: Manages the connection to the MySQL database, allowing other classes to execute SQL queries for data retrieval and manipulation.
+Database Structure
+The system interacts with a MySQL database named airlinemanagementsystem, which includes various tables such as:
+
+login: Stores user credentials for authentication.
+flight: Contains details of available flights.
+reservation: Holds information about booked flights.
+passenger: Stores customer information.
+cancel: Records details of canceled bookings.
+User Interface
+The application features a user-friendly GUI built using Java Swing components, including labels, text fields, buttons, and tables. The interface is designed to be intuitive, allowing users to navigate through different functionalities seamlessly.
+
+Conclusion
+This airline management system project serves as a comprehensive solution for managing airline operations, enabling users to handle bookings, cancellations, and customer data efficiently. The use of a database ensures data persistence, while the GUI provides an accessible and interactive user experience. This project can be further enhanced by adding features like payment processing, flight scheduling, and user role management for a more robust application.
